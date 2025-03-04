@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        select, input, button {
+            margin: 10px 0;
+            width: 100%;
+            padding: 8px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        h3 {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Lista de Compras</h2>
+        
+        <label for="comida">Nome do item:</label>
+        <input type="text" id="comida" placeholder="Digite um item">
+
+        <label for="categoria">Escolha a categoria:</label>
+        <select id="categoria">
+            <option value="frutas">Frutas</option>
+            <option value="laticinios">Laticínios</option>
+            <option value="congelados">Congelados</option>
+            <option value="doces">Doces</option>
+        </select>
+
+        <button id="adicionar" onclick="adicionarItem()">Adicionar</button>
+
+        <h3>Itens na lista:</h3>
+        <div id="listaDeCompras"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
